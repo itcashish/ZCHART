@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		   
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m, sap.makit"
+				data-sap-ui-xx-bindingSyntax="complex"
+				data-sap-ui-theme="sap_mvi">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_mvi" theme -->
+
+		<script>
+				sap.ui.localResources("zmchart");
+				var app = new sap.m.App({initialPage:"idhome1"});
+				var page_Home = sap.ui.view({id:"idhome1", viewName:"zmchart.home", type:sap.ui.core.mvc.ViewType.JS});
+				var page_R1 = sap.ui.view({id:"R1", viewName:"zmchart.R1", type:sap.ui.core.mvc.ViewType.JS});
+				var page_R2 = sap.ui.view({id:"R2", viewName:"zmchart.R2", type:sap.ui.core.mvc.ViewType.JS});
+				var page_R3 = sap.ui.view({id:"R3", viewName:"zmchart.R3", type:sap.ui.core.mvc.ViewType.JS});
+				//app.addPage(page);
+				app.addPage(page_Home).addPage(page_R1).addPage(page_R2).addPage(page_R3);
+                app.placeAt("content");
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
